@@ -1,5 +1,6 @@
-import { comments, createComment } from './comments'
 import { db } from 'src/lib/db'
+
+import { comments, createComment } from './comments'
 
 describe('comments', () => {
   scenario(

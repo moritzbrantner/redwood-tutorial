@@ -1,6 +1,7 @@
 import { Link, routes } from '@redwoodjs/router'
-import CommentsCell from 'src/components/CommentsCell'
+
 import CommentForm from 'src/components/CommentForm'
+import CommentsCell from 'src/components/CommentsCell'
 
 const truncate = (text, length) => {
   if (text.length > length) {
@@ -9,7 +10,6 @@ const truncate = (text, length) => {
     return text
   }
 }
-
 
 const Article = ({ article, summary = false }) => {
   return (
@@ -26,7 +26,7 @@ const Article = ({ article, summary = false }) => {
         <div className="mt-12">
           <CommentForm postId={article.id} />
           <div className="mt-12">
-            <CommentsCell />
+            <CommentsCell postId={article.id} />
           </div>
         </div>
       )}
